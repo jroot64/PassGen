@@ -1,9 +1,5 @@
 package PassGen;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class List{
     ReadLine r = new ReadLine();
     public Password[] save, tmp;
@@ -15,11 +11,13 @@ public class List{
         length ++;
     }
     private void extend(){
-        tmp = new Password[length];
+        tmp = new Password[length+1];
+//        System.arraycopy(save,0,tmp,0,length+1);
         for (int i = 0; i < length; i++) {
             tmp[i] = save[i];
         }
         save = new Password[length+1];
+//        System.arraycopy(tmp,0,save,0,length+1);
         for (int i = 0; i < length; i++) {
             save[i] = tmp[i];
         }
@@ -32,7 +30,7 @@ public class List{
         toDelete.out();
         System.out.println(length);
         System.out.println("Welcher Eintrag soll delöscht werden?");
-        ReadLine read = new ReadLine();
+//        ReadLine read = new ReadLine();
         reduce((Integer.parseInt(r.read())));
         toDelete.out();
     }
@@ -40,7 +38,7 @@ public class List{
         tmp = new Password[length-1];
         for (int i = 0; i < length; i++) {
             if (i<number){tmp[i]=save[i];}
-            if (i==number){}
+//            if (i==number){}
             if (i>number){tmp[i-1]=save[i];}
         }
         save = new Password[length-1];
