@@ -12,11 +12,12 @@ public class Main{
         int decide=0, t=0;
         System.out.println("Herzlich willkommen in Jonas Passwort generator");
         do{
-            String[] menuEntrenc = {"Exit","neues Passwort generieren","alle Passwörter anzeigen","eintrag Löschen","autogen","eintrag ändern"};
+            String[] menuEntry = {"Exit","neues Passwort generieren","alle Passwörter anzeigen","eintrag Löschen","autogen","eintrag ändern"};
+            //MENU replaced by the Menu calss with an evaluation function
             //System.out.println("MENÜ \n 0)EXIT \n 1)neues Passwort generieren \n 2)alle Passwörter anzeigen \n 3)eintrag Löschen \n 4)autogen" +
             //          "\n 5)eintrag Bearbeitern");
-            //decide=Integer.parseInt(r.read()); //TODO Fehlerhafte Eingabe behandeln
-            decide = menu.menu(menuEntrenc, Short.parseShort("6"));
+            //decide=Integer.parseInt(r.read());
+            decide = menu.menu(menuEntry, Short.parseShort("6"),Short.parseShort("1") ,Short.parseShort("1") );
             switch (decide){
                 case 0:
                     return;
