@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8fa077-9cea-4f67-b30d-301021416264" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled1/PassGen/Main.class" afterPath="$PROJECT_DIR$/out/production/untitled1/PassGen/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled1/PassGen/Menu.class" afterPath="$PROJECT_DIR$/out/production/untitled1/PassGen/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled1/PassGen/List.class" afterPath="$PROJECT_DIR$/out/production/untitled1/PassGen/List.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled1/PassGen/Password.class" afterPath="$PROJECT_DIR$/out/production/untitled1/PassGen/Password.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/untitled1/PassGen/ReadLine.class" afterPath="$PROJECT_DIR$/out/production/untitled1/PassGen/ReadLine.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled1.iws" />
@@ -472,7 +472,13 @@
       <option name="project" value="LOCAL" />
       <updated>1421621029289</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Menu restructured and optimized the code">
+      <created>1421621071964</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1421621071964</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
