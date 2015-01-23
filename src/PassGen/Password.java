@@ -1,6 +1,8 @@
 package PassGen;
 
 
+import PassGen.Handler.TrueFalse;
+
 public class Password {
     Menu menu = new Menu();
     private ReadLine r = new ReadLine();
@@ -69,6 +71,8 @@ public class Password {
 //        }
 
     }
+    public Password(boolean toanalyse){
+    }
 
     protected void genNewPassPhrase(){
         String passPhrase;
@@ -131,7 +135,7 @@ public class Password {
     public void setPassForAplication(String passForAplication) {
         this.passForAplication = passForAplication;
     }
-    private void setPassPhrese(String passPhrese) {
+    protected void setPassPhrese(String passPhrese) {
         this.passPhrase = passPhrese;
     }
     public void setLength(int length) {
@@ -186,6 +190,13 @@ public class Password {
                 return true;
         }
         return true;
+    }
+    protected void analyse(){
+        boolean[] tf = TrueFalse.analyse(getPassPhrese());
+        setUpperLetter(tf[0]);
+        setLowerLetter(tf[1]);
+        setNumberLetter(tf[2]);
+        setSpezialLetters(tf[3]);
     }
 
 }

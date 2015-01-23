@@ -40,6 +40,7 @@ public class Menu {
         }while (badAnswer);
         return result;
     }
+
     public void menuEntry(String[] menuEntry,int showNumbers){
 
 //        System.out.println(menuEntry.length);

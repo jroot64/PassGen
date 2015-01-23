@@ -1,18 +1,23 @@
 package PassGen;
 
 
-import PassGen.FileHandler.FileIteraction;
+import PassGen.Handler.AESHandler;
+
+import java.io.File;
 
 public class Main{
     public static void main(String[] args){
+        AESHandler.key();
+        List allPassPhrase = new List();
+        FileIteraction fi = new FileIteraction();
+        allPassPhrase= fi.readPassPhrases();
         ReadLine r = new ReadLine();
         Menu menu = new Menu();
-        List allPassPhrase = new List();
         int decide=0; //t=0;
         System.out.println("Herzlich willkommen in Jonas Passwort generator");
         do{
             String[] menuEntry = {"Exit","neues Passwort generieren","alle Passwörter anzeigen","eintrag Löschen",
-                    "autogen","eintrag ändern","neue Datei"};
+                    "autogen","eintrag ändern","test"};
             //MENU replaced by the Menu calss with an evaluation function
             //System.out.println("MENÜ \n 0)EXIT \n 1)neues Passwort generieren \n 2)alle Passwörter anzeigen \n 3)eintrag Löschen \n 4)autogen" +
             //          "\n 5)eintrag Bearbeitern");
@@ -20,6 +25,8 @@ public class Main{
             decide = menu.menu("HAUPTMENÜ",menuEntry);
             switch (decide){
                 case 0:
+                    AESHandler.key();
+                    fi.savePassPhrases(allPassPhrase);
                     return;
                 case 1:
                     Password password1 = new Password();
@@ -47,10 +54,7 @@ public class Main{
                     Password passToChange = allPassPhrase.getsave(Integer.parseInt(r.read()));
                     passToChange.changeApplication();
                     break;
-//                case 6:
-//                    FileIteraction fi = new FileIteraction();
-//                    fi.FileIteraction();
-            }
+                }
         }while(true);
     }
 

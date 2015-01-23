@@ -54,5 +54,8 @@ public class List{
             System.out.println(i + ") " + save[i].getPassForApplication() + "-> " + save[i].getPassPhrese());
         }
     }
+    protected int getLength(){
+        return length;
+    }
 
 }
