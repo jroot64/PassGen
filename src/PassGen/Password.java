@@ -26,9 +26,10 @@ public class Password {
         setNumberLetter(numberLetter);
     }
     public Password(){
+        Menu menu = new Menu();
 
-        System.out.println("Wie lang soll das Password sein?");
-        setLength(Integer.parseInt(r.read()));
+//        System.out.println("Wie lang soll das Password sein?");
+        setLength(menu.menu("Wie lang soll das Passwort sein?",1,30));
 
         System.out.println("Für welches Programm ist das Passwort?");
         String name = r.read();
