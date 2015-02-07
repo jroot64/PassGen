@@ -9,12 +9,12 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args){
         do{
-            String s="";
+            String test="";
             try{
-                s = read();
-                System.out.println(s.toLowerCase());
+                test = read();
+                System.out.println(test.toLowerCase());
             }catch (NumberFormatException NumberExeption){
-                System.out.println(Float.parseFloat(s));
+                System.out.println(Float.parseFloat(test));
             }
         }while (true);
     }
